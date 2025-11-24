@@ -12,6 +12,37 @@ df_raw["datetime"] = pd.to_datetime(df_raw["datetime"], errors="coerce")
 df_raw = df_raw.dropna(subset=["datetime"])
 st.set_page_config(page_title="Outlook Mail Analytics", layout="wide")
 
+# ---------- HEADER / ABSTRACT (card + expander) ----------
+st.title("Outlook Mail Analytics Dashboard")
+
+st.caption(
+    "Interactive overview of incoming/outgoing Outlook email volume "
+    "by day, week, and calendar heatmaps."
+)
+
+with st.expander("About this app"):
+    st.markdown(
+        """
+        **Purpose**  
+        This app analyzes email activity patterns in a personal Outlook mailbox.
+        It shows how communication volume changes across the year
+        and when (weekday/hour) emails are most frequent.
+
+        **Privacy**  
+        The dashboard reads only:
+        - direction (incoming/outgoing)
+        - received/sent timestamps  
+        It does **not** read or store any email content. You can run locally the outlook_analyst.py script
+        that generates the required CSV files from your Outlook mailbox.
+
+        **Made by**  
+        Jan Špale (CTU UCEEB)
+        """
+    )
+
+st.divider()
+
+
 # ---------- LOAD DATA ----------
 per_day = pd.read_csv("mail_counts_per_day.csv")
 per_week = pd.read_csv("mail_counts_per_week.csv")
