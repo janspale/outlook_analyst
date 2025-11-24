@@ -1,0 +1,15 @@
+direction,weekday,count
+incoming,Friday,641
+incoming,Monday,844
+incoming,Saturday,101
+incoming,Sunday,88
+incoming,Thursday,747
+incoming,Tuesday,851
+incoming,Wednesday,889
+outgoing,Friday,252
+outgoing,Monday,361
+outgoing,Saturday,20
+outgoing,Sunday,17
+outgoing,Thursday,257
+outgoing,Tuesday,277
+outgoing,Wednesday,294
