@@ -177,4 +177,5 @@ python -m pip install pywin32
 
 ## License
 
-MIT (or replace with your preferred license)
+MIT
+
